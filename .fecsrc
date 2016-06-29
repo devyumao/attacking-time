@@ -1,0 +1,11 @@
+{ 
+    "jshint": { 
+        "maxerr": 10000
+    },
+    "eslint": {
+        "globals": {
+            "Phaser": true,
+            "wx": true
+        }
+    }
+}
