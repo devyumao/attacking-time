@@ -1,6 +1,6 @@
 # 小度向前冲
 
-Demo: http://farm.yiluwan.org/efe-game/index.php?debug=true
+Demo: http://devyumao.github.io/attacking-time/dist/
 
 ![qrcode](./screenshot/qrcode.jpg)
 

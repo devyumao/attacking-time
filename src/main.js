@@ -12,9 +12,9 @@ define(function (require) {
      */
     function init() {
         // 线上模式初始化微信
-        if (global.isProdMode()) {
-            require('common/weixin').init();
-        }
+        // if (global.isProdMode()) {
+        //     require('common/weixin').init();
+        // }
 
         initGame();
     }
