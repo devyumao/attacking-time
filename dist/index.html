@@ -21,7 +21,7 @@
     <script src="asset/game.js"></script>
     <script>
     require.config({
-        baseUrl: 'src'
+        baseUrl: 'asset'
     });
     </script>
 </head>
@@ -29,7 +29,7 @@
     <script>
     require(['main'], function (main) {
         var global = require('common/global');
-        global.setMode('dev');
+        global.setMode('prod');
         main.init();
     });
     </script>

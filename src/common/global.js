@@ -72,8 +72,8 @@ define(function (require) {
 
     global.setResource = function () {
         if (global.isProdMode()) {
-            global.path = 'http://ishowshao-game.qiniudn.com/efe-game/asset/img/';
-            // global.path = 'asset/img/';
+            // global.path = 'http://ishowshao-game.qiniudn.com/efe-game/asset/img/';
+            global.path = 'asset/img/';
             global.suffix = '.png?v=*TIMESTAMP*';
 
             global.audioPath = 'asset/audio/';
