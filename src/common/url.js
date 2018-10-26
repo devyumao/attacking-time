@@ -6,7 +6,7 @@
 define(function () {
 
     // var workSpace = 'http://farm.yiluwan.org/efe-game/';
-    var workSpace = 'http://haha/';
+    var workSpace = '/';
 
     return {
         GET_SIGNATURE: 'http://www.yiluwan.org/ecomui/xiaoyouxi?controller=ajax&action=gettoken',

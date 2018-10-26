@@ -190,38 +190,38 @@ define(function (require) {
 
         localKeys.length && global.assignStorage(localKeys);
 
-        if (serverKeys.length) {
-            var serverData = require('common/serverData');
+        // if (serverKeys.length) {
+        //     var serverData = require('common/serverData');
 
-            return new Promise(function (resolve) {
-                serverData.load(
-                    serverKeys,
-                    function (res) {
-                        if (!res && global.isDevMode()) {
-                            global.initStorage(serverKeys);
-                            resolve();
-                            return;
-                        }
-                        res = JSON.parse(res);
-                        var missingKeys = [];
-                        serverKeys.forEach(function (key) {
-                            if (!res.hasOwnProperty(key)) {
-                                missingKeys.push(key);
-                            }
-                        });
-                        global.initStorage(missingKeys);
-                        global.setStorage(res);
-                        resolve();
-                    },
-                    function (err) {
-                        if (global.isDevMode() || global.getNickname() === 'devyumao') {
-                            global.initStorage(serverKeys);
-                        }
-                        resolve();
-                    }
-                );
-            });
-        }
+        //     return new Promise(function (resolve) {
+        //         serverData.load(
+        //             serverKeys,
+        //             function (res) {
+        //                 if (!res && global.isDevMode()) {
+        //                     global.initStorage(serverKeys);
+        //                     resolve();
+        //                     return;
+        //                 }
+        //                 res = JSON.parse(res);
+        //                 var missingKeys = [];
+        //                 serverKeys.forEach(function (key) {
+        //                     if (!res.hasOwnProperty(key)) {
+        //                         missingKeys.push(key);
+        //                     }
+        //                 });
+        //                 global.initStorage(missingKeys);
+        //                 global.setStorage(res);
+        //                 resolve();
+        //             },
+        //             function (err) {
+        //                 if (global.isDevMode() || global.getNickname() === 'devyumao') {
+        //                     global.initStorage(serverKeys);
+        //                 }
+        //                 resolve();
+        //             }
+        //         );
+        //     });
+        // }
 
         return Promise.resolve();
     }
